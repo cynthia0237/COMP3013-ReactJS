@@ -48,5 +48,7 @@
 }
 
 .newAssignmentForm button:disabled {
-  background: red;
+  cursor: not-allowed;
+  background: gainsboro;
+  color: #aba7a7;
 }
