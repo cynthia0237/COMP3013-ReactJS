@@ -6,11 +6,12 @@ import type { TAssignment } from "./type";
 function App() {
   const [assignments, setAssignments] = useState<TAssignment[]>([]);
 
-  const handleAddAssignment = (text: string) => {
+  const handleAddAssignment = (text: string, dueDate: Date) => {
     const newAssignment = {
       id: crypto.randomUUID(),
       title: text,
-      isComplete: false
+      isComplete: false,
+      dueDate: dueDate
     }
 
     setAssignments([...assignments, newAssignment]);
